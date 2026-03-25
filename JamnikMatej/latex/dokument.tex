@@ -1,0 +1,89 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[slovene]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{enumerate}
+
+\newcommand{\NN}{\mathbb{N}}
+
+\theoremstyle{definition}
+\newtheorem{definicija}{Definicija}
+
+\theoremstyle{definition}
+\newtheorem{naloga}{Naloga}
+
+\theoremstyle{definition}
+\newtheorem{primer}{Primer}
+
+\begin{document}
+
+% 1. naloga: 
+% Naloge iz analize
+% Micka Kovač
+\title{Naloge iz analize}
+\author{Micka Kovač}
+\date{}
+\maketitle
+Pri reševanju nalog uporabite učbenika~\cite{vidav08, rudin87} in zapiske s predavanj.
+
+% začetek definicije
+  
+  \begin{definicija}
+    Realno zaporedje $(a_n)_{n \in \NN}$ \emph{konvergira} k realnemu številu~$x$, kadar velja
+    %
+    % 2. naloga
+    \[
+      \forall  \epsilon  > 0 \,.\, \exists  m \in \NN \,.\, \forall n  \geq   m \,.\, |x - a_n| < \epsilon.
+    \]
+    %
+    Pravimo tudi, da je $x$ \emph{limita} zaporedja $(a_n)_{n \in \NN}$.
+  \end{definicija}
+% konec definicije
+
+% začetek naloge
+  
+  \begin{naloga}
+    Izračunajte limite, če obstajajo:
+    %
+    % 4. naloga
+    % začetek seznama
+    
+    \begin{enumerate}[(a)]
+      \item $\lim_{n \to \infty} \sqrt{n^2 + 7 n} - \sqrt{n^2 + 4 n + 1}$,
+      \item $\lim_{n \to \infty} \frac{\sin (1/n)}{e^{-n}}$,
+      \item $\lim_{n \to \infty} (1 + 2/n)^{3 n}$.
+    \end{enumerate}
+  \end{naloga}
+  % konec seznama
+% konec naloge
+
+% začetek primera
+  
+  \begin{primer}
+    Zmnožek polinoma in trigonometrijske funkcije integriramo z metodo ">per partes"<:
+    % 
+    % 5. naloga
+       
+       \begin{align*}
+        \int x^2 \, \sin x \, dx  &= - x^2 \, \cos x + 2 \int x \, \cos x \, dx \\
+                                  &= - x^2 \, \cos x + 2 \left(x \, \sin x - \int \sin x \, dx \right) \\
+                                  &= - x^2 \, \cos x + 2 x \, \sin x + 2 \cos x + C \\
+                                  &= (2 - x^2) \, \cos x + 2 x \, \sin x + C.
+       \end{align*}
+  \end{primer}
+% konec primera
+
+%\cite{rudin87}
+%\cite{vidav08}
+\bibliographystyle{plain}
+\bibliography{nalbib.bib}
+
+
+\end{document}
